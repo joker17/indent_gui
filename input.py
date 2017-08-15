@@ -19,6 +19,7 @@ class Application(Frame):
     def hello(self):
         name = self.nameInput1.get() or 'world'
         messagebox.showinfo('Message', 'Hello,%s' % name)
+        #self.output.insert()
 
 app = Application()
 # 设置窗口标题:
