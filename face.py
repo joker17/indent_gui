@@ -1,5 +1,6 @@
 from tkinter import *
 
+#Mac OK
 class Application(Frame):
     def __init__(self, master=None):
         Frame.__init__(self, master)

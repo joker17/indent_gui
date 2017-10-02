@@ -11,7 +11,7 @@ class Application(Frame):
     def createWidgets(self):
         self.nameInput1 = Entry(self)
         self.nameInput1.pack()
-        self.alertButton = Button(self, text='Hello', command=self.hello)
+        self.alertButton = Button(self, text='Hello tst', command=self.hello)
         self.alertButton.pack()
         self.output = Text(self)
         self.output.pack()
@@ -19,7 +19,7 @@ class Application(Frame):
     def hello(self):
         name = self.nameInput1.get() or 'world'
         messagebox.showinfo('Message', 'Hello,%s' % name)
-        #self.output.insert()
+        self.output.insert(INSERT, name)
 
 app = Application()
 # 设置窗口标题:
