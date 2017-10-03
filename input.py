@@ -1,6 +1,9 @@
 from tkinter import *
 import tkinter.messagebox as messagebox
 import tkinter.scrolledtext as scrolledtext
+import sys
+sys.path.append("..")
+from indent.indent import proc_indent
 
 class Application(Frame):
     def __init__(self, master=None):
@@ -11,7 +14,7 @@ class Application(Frame):
     def createWidgets(self):
         #self.nameInput1 = Entry(self)
         #self.nameInput1.pack()
-        self.alertButton = Button(self, text='Hello tst', command=self.hello)
+        self.alertButton = Button(self, text='自动缩进', command=self.hello)
         self.alertButton.pack()
         self.lb1 = Label(self, text = "请输入源代码")
         self.lb1.pack()
@@ -23,10 +26,10 @@ class Application(Frame):
         self.output1.pack()
 
     def hello(self):
-        name = self.nameInput1.get() 
-        name1 = self.output1.get('1.0', END) or "world"
-        messagebox.showinfo('Message', 'Hello,%s' % name1)
-        self.output.insert(INSERT, name)
+        text1 = self.output.get('1.0', END)
+        text2 = proc_indent(text1.split('\n'))
+        #messagebox.showinfo('Message', 'Hello,%s' % name1)
+        self.output1.insert(INSERT, text2)
 
 app = Application()
 # 设置窗口标题:
