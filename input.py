@@ -14,7 +14,7 @@ class Application(Frame):
     def createWidgets(self):
         #self.nameInput1 = Entry(self)
         #self.nameInput1.pack()
-        self.alertButton = Button(self, text='自动缩进', command=self.hello)
+        self.alertButton = Button(self, text='整理缩进', command=self.hello)
         self.alertButton.pack()
         self.lb1 = Label(self, text = "请输入源代码")
         self.lb1.pack()
