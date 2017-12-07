@@ -6,6 +6,7 @@ import tkinter.scrolledtext as scrolledtext
 import math
 import sys
 sys.path.append("..")
+#sys.path.append("F:\projects")
 from indent.indent import proc_indent
 from gene_sum.mysum import generate_sum
 from gene_sum.parase_xml import get_words
