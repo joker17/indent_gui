@@ -98,7 +98,7 @@ class Application(Frame):
 
 app = Application()
 # 设置窗口标题:
-app.master.title('Hello World')
+app.master.title('UFC求和--代码生成器')
 #app.master.ou
 # 主消息循环:
 app.mainloop()
